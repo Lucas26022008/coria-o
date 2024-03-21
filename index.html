@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envelope</title>
+    <title>Envelope com Corações</title>
     <style>
         .envelope {
             position: relative;
@@ -30,11 +30,15 @@
             transition: opacity 0.5s;
         }
 
-        .hearts .heart {
+        .heart {
             width: 20px;
             height: 20px;
-            background-color: #ff0000;
-            border-radius: 50%;
+            background: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            border-radius: 0 10px 10px 0 / 0 50% 50% 0;
             margin: 0 5px;
             transition: transform 0.3s;
             transform: scale(1);
@@ -44,8 +48,8 @@
             opacity: 1;
         }
 
-        .envelope:hover .hearts .heart {
-            transform: scale(1.5);
+        .envelope:hover .heart {
+            transform: scale(1.5) rotate(45deg);
         }
 
     </style>
@@ -53,12 +57,12 @@
 <body>
     <div class="envelope">
         <div class="hearts">
+            <div class="heart">
             <div class="heart"></div>
             <div class="heart"></div>
             <div class="heart"></div>
-            <div class="heart"></div>
-            <div class="heart"></div>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
+    
