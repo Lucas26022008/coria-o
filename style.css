@@ -4,6 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f0f0f0;
   }
   
   .container {
@@ -13,9 +14,30 @@ body {
   .card {
     width: 300px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
   }
   
   #carta-img {
     width: 100%;
     height: auto;
+  }
+  
+  .heart {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: fall 5s linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100vh);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
   }  
